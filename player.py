@@ -20,11 +20,11 @@ class Player:
         # If keystroke is pressed
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                self.playerX_change = -0.3
+                self.playerX_change = -1
             if event.key == pygame.K_RIGHT:
-                self.playerX_change = 0.3
+                self.playerX_change = 1
             if event.key == pygame.K_UP:
-                self.playerY_change -= 0.3
+                self.playerY_change -= 1
 
         # If keystroke is released
         if event.type == pygame.KEYUP:
@@ -46,6 +46,6 @@ class Player:
 
     def update(self, event):
         self.handleControls(event)
-        self.move()
         self.handleBoundaries()
+        self.move()
 

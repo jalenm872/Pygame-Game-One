@@ -5,7 +5,8 @@ from player import Player
 pygame.init()
 
 # Create the screen (width, height)
-screen = pygame.display.set_mode((1000, 800))
+screen = pygame.display.set_mode((800, 640))
+print("Hello")
 
 # Title and Icon
 # Caption is the title of the window
@@ -40,11 +41,5 @@ while running:
     # Draw the player
     screen.blit(playerImg, (player.playerX, player.playerY))
 
-    
-    
-
     # Update the screen
     pygame.display.update()
-
-# End the game
-pygame.quit()
